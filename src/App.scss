@@ -1,0 +1,101 @@
+$bg-dark-mode: #000;
+$grey-dark-mode: rgba(66, 66, 66, 0.712);
+$white-text: #fff;
+$primary: rgb(0, 132, 255);
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+  font-size: 1rem;
+  background-color: whitesmoke;
+  .header {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10%;
+  }
+  .sun-icon {
+    margin-left: 6px;
+    margin-top: 6px;
+  }
+}
+
+body.dark-mode {
+  background-color: $bg-dark-mode;
+  color: $white-text;
+  .moon-icon {
+    margin-left: 6px;
+    margin-top: 6px;
+  }
+  hr {
+    border-color: black;
+  }
+}
+
+.app {
+  text-align: center;
+  margin: 1rem auto;
+  .breach-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    .breach {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 10px;
+      border-radius: 6px;
+      background-color: $grey-dark-mode;
+      width: 800px;
+      .breach-desc {
+        padding: 10px;
+        text-align: start;
+      }
+      &:hover {
+        background-color: rgba(159, 163, 167, 1);
+      }
+      .breach-header {
+        cursor: pointer;
+        display: flex;
+        width: 100%;
+        .breach-body {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          margin-left: 15px;
+        }
+        .breach-title {
+          text-decoration: underline;
+          font-size: 1.5em;
+          font-weight: 500;
+        }
+        .breach-date {
+          text-decoration: underline;
+          font-size: 1em;
+          font-weight: 500;
+        }
+        .breach-img {
+          padding: 10px;
+        }
+      }
+    }
+  }
+  .breach-content {
+    &.hidden {
+      display: none;
+    }
+    .breach-pwned {
+      font-size: large;
+    }
+  }
+  .breach-img {
+    margin-left: auto;
+    margin-right: 3em;
+    .breach-logo {
+      height: 100px;
+      max-width: 300px;
+    }
+  }
+}
